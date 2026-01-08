@@ -121,14 +121,36 @@
                     <h1 class="text-xl font-bold">少交政府网</h1>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <a href="#" class="text-sm text-gov-text-secondary hover:text-gov-pink">简体</a>
-                    <a href="#" class="text-sm text-gov-text-secondary hover:text-gov-pink">繁体</a>
-                    <a href="#" class="text-sm text-gov-text-secondary hover:text-gov-pink">English</a>
-                    <a href="#" class="text-sm text-gov-text-secondary hover:text-gov-pink">无障碍浏览</a>
+                    <a href="#" class="text-sm text-gov-pink font-medium border-b-2 border-gov-pink" id="lang-zh-cn">简体</a>
+                    <a href="#" class="text-sm text-gov-text-secondary hover:text-gov-pink" id="lang-zh-tw">繁体</a>
+                    <a href="#" class="text-sm text-gov-text-secondary hover:text-gov-pink" id="lang-en">English</a>
+                    <button id="accessibility-toggle" class="text-sm text-gov-text-secondary hover:text-gov-pink focus:outline-none">无障碍浏览</button>
+                    <a href="#sitemap" class="text-sm text-gov-text-secondary hover:text-gov-pink">网站地图</a>
                 </div>
             </div>
         </div>
     </header>
+    
+    <!-- 无障碍工具条 -->
+    <div id="accessibility-toolbar" class="bg-gray-100 border-b border-gov-border hidden">
+        <div class="gov-container flex items-center justify-between py-2">
+            <div class="flex items-center space-x-4">
+                <span class="text-sm font-medium">无障碍选项：</span>
+                <button id="font-size-inc" class="text-sm bg-white border border-gov-border px-2 py-1 rounded hover:bg-gray-50">
+                    <i class="fa fa-plus"></i> 字体放大
+                </button>
+                <button id="font-size-dec" class="text-sm bg-white border border-gov-border px-2 py-1 rounded hover:bg-gray-50">
+                    <i class="fa fa-minus"></i> 字体缩小
+                </button>
+                <button id="high-contrast" class="text-sm bg-white border border-gov-border px-2 py-1 rounded hover:bg-gray-50">
+                    <i class="fa fa-adjust"></i> 高对比度
+                </button>
+                <button id="accessibility-close" class="text-sm bg-white border border-gov-border px-2 py-1 rounded hover:bg-gray-50">
+                    <i class="fa fa-times"></i> 关闭
+                </button>
+            </div>
+        </div>
+    </div>
     
     <!-- 主导航栏 -->
     <nav class="bg-white border-b border-gov-border">
@@ -359,6 +381,51 @@
         </div>
     </main>
     
+    <!-- 网站地图 -->
+    <section id="sitemap" class="gov-section bg-gov-background-secondary py-8">
+        <div class="gov-container">
+            <h3 class="text-2xl font-bold mb-6 text-center">网站地图</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-3 text-gov-pink">主导航</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="home">首页</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="gov-info">少交公开</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="gov-service">少交服务</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="interaction">互动交流</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="data">数据</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="state-council">国务院</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="news">新闻</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="topics">专题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3 text-gov-pink">热门服务</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-card">友谊证办理</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="strange-passport">奇妙护照申请</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="weird-tax">奇怪税务申报</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-health">友谊健康服务</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-education">友谊学校和奇怪教育</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-message-board">友谊留言板</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-benefits">友谊福利金</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3 text-gov-pink">其他链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">关于少交政府</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">联系方式</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">隐私政策</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">使用条款</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">无障碍声明</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" id="accessibility-toggle">无障碍工具</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- 页脚 -->
     <footer class="gov-footer">
         <div class="gov-container">
@@ -406,7 +473,7 @@
                     <span>|</span>
                     <a href="#" class="hover:text-gov-pink">无障碍声明</a>
                     <span>|</span>
-                    <a href="#" class="hover:text-gov-pink">网站地图</a>
+                    <a href="#sitemap" class="hover:text-gov-pink">网站地图</a>
                 </div>
             </div>
         </div>
@@ -418,63 +485,63 @@
         const serviceContent = {
             'friendship-card': {
                 title: '友谊证办理',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇</div>'
             },
             'strange-passport': {
                 title: '奇妙护照申请',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇</div>'
             },
             'weird-tax': {
                 title: '奇怪税务申报',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇</div>'
             },
             'friendship-health': {
                 title: '友谊健康服务',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇</div>'
             },
             'friendship-education': {
                 title: '友谊学校和奇怪教育',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇</div>'
             },
             'friendship-message-board': {
                 title: '友谊留言板',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇</div>'
             },
             'friendship-benefits': {
                 title: '友谊福利金、情感养老金和其他奇怪福利',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇</div>'
             },
             'friendship-family': {
                 title: '友谊家庭补贴和奇怪儿童福利',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇</div>'
             },
             'friendship-disability': {
                 title: '友谊障碍补助和情感护理服务',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇</div>'
             },
             'friendship-birth': {
                 title: '友谊诞生登记',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇 哨焦 哨浇</div>'
             },
             'friendship-death': {
                 title: '友谊消逝登记',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇 哨焦 哨浇 潲焦 潲浇</div>'
             },
             'friendship-employment': {
                 title: '友谊就业机会和情感职业培训',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇 哨焦 哨浇 潲焦 潲浇 芍教 芍焦 梢教 梢焦 烧教 烧焦 绍教 绍焦 劭教 劭焦</div>'
             },
             'friendship-entrepreneurship': {
                 title: '友谊创业支持和奇怪企业发展',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇 哨焦 哨浇 潲焦 潲浇 芍教 芍焦 梢教 梢焦 烧教 烧焦 绍教 绍焦 劭教 劭焦 哨教 哨焦 潲教 潲焦</div>'
             },
             'friendship-business-tax': {
                 title: '友谊商业税收和奇怪法规',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇 哨焦 哨浇 潲焦 潲浇 芍教 芍焦 梢教 梢焦 烧教 烧焦 绍教 绍焦 劭教 劭焦 哨教 哨焦 潲教 潲焦 韶交 韶焦 少交 少焦 芍交 芍焦 梢交 梢焦 烧交 烧焦 绍交 绍焦 劭交 劭焦</div>'
             },
             'friendship-child-welfare': {
                 title: '友谊儿童福利和奇怪服务',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇 哨焦 哨浇 潲焦 潲浇 芍教 芍焦 梢教 梢焦 烧教 烧焦 绍教 绍焦 劭教 劭焦 哨教 哨焦 潲教 潲焦 韶交 韶焦 少交 少焦 芍交 芍焦 梢交 梢焦 烧交 烧焦 绍交 绍焦 劭交 劭焦 哨交 哨焦 潲交 潲焦</div>'
             }
         };
         
@@ -482,31 +549,31 @@
         const navContent = {
             'gov-info': {
                 title: '少交公开',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇</div>'
             },
             'gov-service': {
                 title: '少交服务',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇</div>'
             },
             'interaction': {
                 title: '互动交流',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇</div>'
             },
             'data': {
                 title: '数据',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇</div>'
             },
             'state-council': {
                 title: '国务院',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇</div>'
             },
             'news': {
                 title: '新闻',
-                content: '<div class="text-center text-6xl font-bold text-gov-blue">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-blue">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇 哨焦 哨浇</div>'
             },
             'topics': {
                 title: '专题',
-                content: '<div class="text-center text-6xl font-bold text-gov-pink">少交</div>'
+                content: '<div class="text-center text-3xl font-bold text-gov-pink">少交 烧鸡 烧焦 芍椒 芍蕉 梢焦 梢椒 烧椒 烧蕉 少椒 少蕉 韶焦 韶椒 韶交 韶教 少教 芍交 芍教 梢交 梢教 烧交 烧教 绍交 绍教 绍焦 绍椒 劭交 劭教 劭焦 劭椒 哨交 哨教 哨焦 哨椒 潲交 潲教 潲焦 潲椒 梢浇 烧浇 少浇 绍浇 劭浇 哨浇 潲浇 芍浇 韶浇 捎交 捎教 捎焦 捎椒 捎浇 艄交 艄教 艄焦 艄椒 艄浇 筲交 筲教 筲焦 筲椒 筲浇 韶蕉 韶浇 劭蕉 劭浇 哨蕉 哨浇 潲蕉 潲浇 芍蕉 芍浇 烧蕉 烧浇 梢蕉 梢浇 绍蕉 绍浇 少蕉 少浇 劭椒 劭浇 哨椒 哨浇 潲椒 潲浇 芍椒 芍浇 烧椒 烧浇 梢椒 梢浇 绍椒 绍浇 少椒 少浇 韶教 韶浇 少教 少浇 芍教 芍浇 梢教 梢浇 烧教 烧浇 绍教 绍浇 劭教 劭浇 哨教 哨浇 潲教 潲浇 捎教 捎浇 艄教 艄浇 筲教 筲浇 韶焦 韶浇 少焦 少浇 芍焦 芍浇 梢焦 梢浇 烧焦 烧浇 绍焦 绍浇 劭焦 劭浇 哨焦 哨浇 潲焦 潲浇 芍教 芍焦 梢教 梢焦 烧教 烧焦 绍教 绍焦 劭教 劭焦 哨教 哨焦 潲教 潲焦</div>'
             }
         };
         
@@ -518,6 +585,25 @@
         const backButton = document.getElementById('back-button');
         const searchInput = document.getElementById('search-input');
         const navItems = document.querySelectorAll('.gov-nav-item');
+        
+        // 语言切换元素
+        const langZhCn = document.getElementById('lang-zh-cn');
+        const langZhTw = document.getElementById('lang-zh-tw');
+        const langEn = document.getElementById('lang-en');
+        
+        // 无障碍浏览元素
+        const accessibilityToggle = document.getElementById('accessibility-toggle');
+        const accessibilityToolbar = document.getElementById('accessibility-toolbar');
+        const accessibilityClose = document.getElementById('accessibility-close');
+        const fontSizeInc = document.getElementById('font-size-inc');
+        const fontSizeDec = document.getElementById('font-size-dec');
+        const highContrast = document.getElementById('high-contrast');
+        
+        // 网站地图元素
+        const sitemap = document.getElementById('sitemap');
+        
+        // 当前字体大小
+        let currentFontSize = 16;
         
         // 显示内容
         function showContent(title, content) {
@@ -539,6 +625,50 @@
             const query = searchInput.value.trim();
             if (query) {
                 alert(`你搜索了：${query}\n\n少交政府正在为你寻找奇怪的结果...\n\n（友情提示：这里只是个演示，实际搜索功能需要后端支持哦！）`);
+            }
+        }
+        
+        // 语言切换功能
+        function switchLanguage(lang) {
+            // 移除所有语言的激活状态
+            [langZhCn, langZhTw, langEn].forEach(l => {
+                l.classList.remove('text-gov-pink', 'font-medium', 'border-b-2', 'border-gov-pink');
+                l.classList.add('text-gov-text-secondary', 'hover:text-gov-pink');
+            });
+            
+            // 添加当前语言的激活状态
+            lang.classList.remove('text-gov-text-secondary', 'hover:text-gov-pink');
+            lang.classList.add('text-gov-pink', 'font-medium', 'border-b-2', 'border-gov-pink');
+            
+            // 模拟语言切换效果
+            alert(`语言已切换到：${lang.textContent}\n\n（友情提示：这里只是个演示，实际语言切换需要后端支持哦！）`);
+        }
+        
+        // 无障碍浏览功能
+        function toggleAccessibilityToolbar() {
+            accessibilityToolbar.classList.toggle('hidden');
+        }
+        
+        function increaseFontSize() {
+            currentFontSize += 2;
+            document.body.style.fontSize = `${currentFontSize}px`;
+        }
+        
+        function decreaseFontSize() {
+            if (currentFontSize > 12) {
+                currentFontSize -= 2;
+                document.body.style.fontSize = `${currentFontSize}px`;
+            }
+        }
+        
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+            if (document.body.classList.contains('high-contrast')) {
+                document.body.style.backgroundColor = '#000';
+                document.body.style.color = '#fff';
+            } else {
+                document.body.style.backgroundColor = '';
+                document.body.style.color = '';
             }
         }
         
@@ -588,6 +718,38 @@
         
         // 搜索按钮点击事件
         document.querySelector('button[type="submit"]')?.addEventListener('click', search);
+        
+        // 语言切换事件
+        langZhCn.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchLanguage(langZhCn);
+        });
+        
+        langZhTw.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchLanguage(langZhTw);
+        });
+        
+        langEn.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchLanguage(langEn);
+        });
+        
+        // 无障碍浏览事件
+        accessibilityToggle.addEventListener('click', toggleAccessibilityToolbar);
+        accessibilityClose.addEventListener('click', toggleAccessibilityToolbar);
+        fontSizeInc.addEventListener('click', increaseFontSize);
+        fontSizeDec.addEventListener('click', decreaseFontSize);
+        highContrast.addEventListener('click', toggleHighContrast);
+        
+        // 网站地图链接事件
+        document.querySelectorAll('#sitemap a[data-nav], #sitemap a[data-service]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                // 滚动到顶部
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 </html>
