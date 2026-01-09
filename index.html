@@ -131,6 +131,317 @@
         </div>
     </header>
     
+    <!-- 彩色横幅区域 -->
+    <section class="bg-gradient-to-r from-gov-pink to-gov-blue text-white py-6">
+        <div class="gov-container">
+            <div class="flex flex-wrap items-center justify-between">
+                <div>
+                    <h2 class="text-xl font-bold">欢迎访问少交政府网</h2>
+                    <p class="text-sm">少交政府门户网站 - 两个人关系很好的奇妙世界</p>
+                </div>
+                <div class="flex items-center space-x-4 mt-2 sm:mt-0">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm">友谊之歌：</span>
+                        <audio controls class="bg-white rounded text-gov-text">
+                            <source src="friendship-song.mp3" type="audio/ogg">
+                            您的浏览器不支持音频播放。
+                        </audio>
+                    </div>
+                    <span class="text-white">|</span>
+                    <a href="#" class="text-white hover:text-gray-200 text-sm">联系我们</a>
+                    <span class="text-white">|</span>
+                    <a href="#" class="text-white hover:text-gray-200 text-sm">常见问题</a>
+                    <span class="text-white">|</span>
+                    <a href="#" class="text-white hover:text-gray-200 text-sm">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 搜索区域 -->
+    <section class="bg-white py-8 border-b border-gov-border">
+        <div class="gov-container">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4 text-gov-text">少交政府服务与信息</h2>
+                <p class="text-lg mb-6 text-gov-text-secondary">少交政府网帮助您查找奇妙服务、奇怪项目和无厘头信息。</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div class="relative w-full sm:w-96">
+                        <input type="search" id="search-input" placeholder="搜索少交政府奇妙服务、奇怪项目和无厘头信息" class="w-full px-5 py-3 border-2 border-gov-pink focus:outline-none focus:ring-2 focus:ring-gov-pink rounded-full">
+                        <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-gov-pink to-gov-blue text-white px-6 py-2 rounded-full hover:from-gov-pink-dark hover:to-gov-blue-dark transition-colors">搜索</button>
+                    </div>
+                    <a href="#" class="inline-block bg-gradient-to-r from-gov-pink to-gov-blue text-white px-6 py-3 rounded-full hover:from-gov-pink-dark hover:to-gov-blue-dark transition-colors">查找服务 <i class="fa fa-angle-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 主要内容区 -->
+    <main id="main" class="gov-container">
+        <!-- 内容展示区域 -->
+        <div id="content-display" class="gov-section hidden">
+            <div class="flex items-center justify-between mb-6">
+                <h3 id="content-title" class="text-2xl font-bold"></h3>
+                <button id="back-button" class="bg-gradient-to-r from-gov-pink to-gov-blue text-white px-4 py-2 hover:from-gov-pink-dark hover:to-gov-blue-dark transition-colors rounded-md">返回</button>
+            </div>
+            <div id="content-body" class="gov-card"></div>
+        </div>
+        
+        <!-- 首页内容 -->
+        <div id="home-content">
+            <!-- 热门服务 -->
+            <section class="gov-section">
+                <h3 class="text-2xl font-bold mb-6">热门奇妙服务</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="gov-card text-center" data-service="friendship-card">
+                        <div class="text-gov-pink text-4xl mb-2"><i class="fa fa-heart"></i></div>
+                        <h4 class="font-bold mb-1">友谊证办理</h4>
+                        <p class="text-sm text-gov-text-secondary">证明你和少或交关系很好</p>
+                    </div>
+                    <div class="gov-card text-center" data-service="strange-passport">
+                        <div class="text-gov-blue text-4xl mb-2 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM7 4.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 0 1h-.5v.5a.5.5 0 0 1-1 0v-.5h-1a.5.5 0 0 1-.5-.5v-.5h-.5a.5.5 0 0 1 0-1h.5v-.5zM6 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm2-1a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1zm4 3.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5zm-3 0a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5zm-3 0a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5z"/>
+                        </svg>
+                    </div>
+                        <h4 class="font-bold mb-1">奇妙护照申请</h4>
+                        <p class="text-sm text-gov-text-secondary">通往莫名其妙世界的通行证</p>
+                    </div>
+                    <div class="gov-card text-center" data-service="weird-tax">
+                        <div class="text-gov-pink text-4xl mb-2"><i class="fa fa-calendar"></i></div>
+                        <h4 class="font-bold mb-1">奇怪税务申报</h4>
+                        <p class="text-sm text-gov-text-secondary">为你的奇怪想法交税</p>
+                    </div>
+                    <div class="gov-card text-center" data-service="friendship-health">
+                        <div class="text-gov-blue text-4xl mb-2"><i class="fa fa-heartbeat"></i></div>
+                        <h4 class="font-bold mb-1">友谊健康服务</h4>
+                        <p class="text-sm text-gov-text-secondary">检查你和少交的友谊健康度</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 服务与信息 -->
+            <section class="gov-section">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 左侧内容 -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold mb-6">服务与信息</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-lg font-bold mb-3">个人服务</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-benefits">友谊福利金、情感养老金和其他奇怪福利</a>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-family">友谊家庭补贴和奇怪儿童福利</a>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-disability">友谊障碍补助和情感护理服务</a>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-birth">友谊诞生登记</a>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-death">友谊消逝登记</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-3">企业服务</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-employment">友谊就业机会和情感职业培训</a>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-entrepreneurship">友谊创业支持和奇怪企业发展</a>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-business-tax">友谊商业税收和奇怪法规</a>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-child-welfare">友谊儿童福利和奇怪服务</a>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-angle-right text-gov-pink mr-2"></i>
+                                        <a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-education">友谊学校和奇怪教育</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧内容 -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">最新公告</h3>
+                        <div class="gov-card">
+                            <div class="bg-pink-50 border-l-4 border-gov-pink p-4 mb-4">
+                                <div class="flex items-start">
+                                    <i class="fa fa-exclamation-circle text-gov-pink mr-2 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold">重要公告</h4>
+                                        <p class="text-sm">少交政府将于下月1日起实施新的友谊检查制度，请所有少交居民提前做好准备。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="border-b pb-2">
+                                    <h4 class="font-bold text-sm mb-1">少交政府举办第五届友谊技能大赛</h4>
+                                    <p class="text-xs text-gov-text-secondary">2026年1月15日</p>
+                                </div>
+                                <div class="border-b pb-2">
+                                    <h4 class="font-bold text-sm mb-1">少交政府与邻国签署奇怪贸易合作协议</h4>
+                                    <p class="text-xs text-gov-text-secondary">2026年1月10日</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm mb-1">少交政府发布新的莫名其妙环保政策</h4>
+                                    <p class="text-xs text-gov-text-secondary">2026年1月5日</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 互动交流 -->
+            <section class="gov-section">
+                <h3 class="text-2xl font-bold mb-6">互动交流</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="gov-card" data-service="friendship-message-board">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="text-gov-pink text-3xl"><i class="fa fa-comments"></i></div>
+                            <h4 class="font-bold">友谊留言板</h4>
+                        </div>
+                        <p class="text-sm text-gov-text-secondary mb-3">欢迎你反映友谊问题，并就提升少交政府友谊服务水平、优化奇怪营商环境提出建议。</p>
+                        <a href="#" class="text-sm text-gov-pink hover:underline">我要留言 <i class="fa fa-angle-right"></i></a>
+                    </div>
+                    <div class="gov-card" data-service="friendship-online-interview">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="text-gov-blue text-3xl"><i class="fa fa-microphone"></i></div>
+                            <h4 class="font-bold">友谊在线访谈</h4>
+                        </div>
+                        <p class="text-sm text-gov-text-secondary mb-3">与少交政府官员在线交流，解答你的友谊问题和奇怪 concerns。</p>
+                        <a href="#" class="text-sm text-gov-blue hover:underline">查看访谈 <i class="fa fa-angle-right"></i></a>
+                    </div>
+                    <div class="gov-card" data-service="friendship-opinion-collection">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="text-gov-pink text-3xl"><i class="fa fa-list"></i></div>
+                            <h4 class="font-bold">友谊意见征集</h4>
+                        </div>
+                        <p class="text-sm text-gov-text-secondary mb-3">参与少交政府友谊政策制定，提出你的宝贵意见和奇怪建议。</p>
+                        <a href="#" class="text-sm text-gov-pink hover:underline">参与征集 <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- 网站地图 -->
+    <section id="sitemap" class="gov-section bg-gov-background-secondary py-8">
+        <div class="gov-container">
+            <h3 class="text-2xl font-bold mb-6 text-center">网站地图</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-3 text-gov-pink">主导航</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="home">首页</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="gov-info">少交公开</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="gov-service">少交服务</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="interaction">互动交流</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="data">数据</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="state-council">国务院</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="news">新闻</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-nav="topics">专题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3 text-gov-pink">热门服务</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-card">友谊证办理</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="strange-passport">奇妙护照申请</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="weird-tax">奇怪税务申报</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-health">友谊健康服务</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-education">友谊学校和奇怪教育</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-message-board">友谊留言板</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" data-service="friendship-benefits">友谊福利金</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3 text-gov-pink">其他链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">关于少交政府</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">联系方式</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">隐私政策</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">使用条款</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">无障碍声明</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink" id="accessibility-toggle">无障碍工具</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer class="gov-footer">
+        <div class="gov-container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold mb-4">关于少交政府</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">少交政府机构</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">少交政府大臣</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">少交政府政策</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">服务与信息</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">友谊福利</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">友谊教育</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">友谊健康</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">友谊住房</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">法律与监管</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">少交政府法律</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">少交政府法规</a></li>
+                        <li><a href="#" class="text-gov-text-secondary hover:text-gov-pink">少交政府报告</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">联系方式</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><i class="fa fa-map-marker text-gov-text-secondary mr-2"></i> 少交政府首都 - 莫名其妙市</li>
+                        <li class="flex items-center"><i class="fa fa-phone text-gov-text-secondary mr-2"></i> 1314-520-7777</li>
+                        <li class="flex items-center"><i class="fa fa-envelope text-gov-text-secondary mr-2"></i> love@shaojiao.gov</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t pt-8 text-center text-sm text-gov-text-secondary">
+                <p>© 2026 少交政府 版权所有 - 两个人关系很好的奇妙世界</p>
+                <div class="flex items-center justify-center space-x-4 mt-2">
+                    <a href="#" class="hover:text-gov-pink">隐私政策</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-gov-pink">使用条款</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-gov-pink">无障碍声明</a>
+                    <span>|</span>
+                    <a href="#sitemap" class="hover:text-gov-pink">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
     <!-- 无障碍工具条 -->
     <div id="accessibility-toolbar" class="bg-gray-100 border-b border-gov-border hidden">
         <div class="gov-container flex items-center justify-between py-2">
@@ -481,6 +792,24 @@
     
     <!-- JavaScript -->
     <script>
+        // 时间锁功能
+        function checkTimeLock() {
+            const now = new Date();
+            const hours = now.getHours();
+            
+            // 检查是否在12:00-13:00之间
+            if (!(hours >= 12 && hours < 13)) {
+                // 非允许时间，重定向到目标网站
+                window.location.href = "https://www.fbi.gov/";
+            }
+        }
+        
+        // 页面加载时检查时间锁
+        window.addEventListener('load', checkTimeLock);
+        
+        // 每秒检查一次时间锁
+        setInterval(checkTimeLock, 1000);
+        
         // 服务内容数据
         const serviceContent = {
             'friendship-card': {
